@@ -7,7 +7,7 @@
   (let [data {:name name
               :sanitized (sanitize name)
               :year (year)}
-        render #((renderer "compojure-webapi") % data)]
+        render #((renderer "compojure_webapi") % data)]
     (->files data
              [".gitignore"                       (render "gitignore")]
              ["project.clj"                      (render "project.clj")]
